@@ -202,40 +202,6 @@ $(document).ready(function (){
         }
     }); //end droppable
 
-    //add floor plan, a post request
-    $('#add-plan').on('click', function() {
-
-        //create the object, single string with the link
-        // var fl_plan = {
-        //     imglink: $('#floorplan').val(),
-        // };
-
-        // $.ajax({
-        //     type: 'POST',
-        //     url: 'http://rest.learncode.academy/api/daniel/plan',
-        //     data: fl_plan,
-        //     success: function() {
-        //         console.log("Added floor plan image");
-        //     },
-        //     error: function() {
-        //         alert("error adding floor plan");
-        //     }
-        // });
-
-    });
-
-
-    $.ajax({
-        type: 'GET',
-        url: 'http://rest.learncode.academy/api/daniel/plan',
-        success: function(imglink) {
-            //creating a parameter at func givens back the array of objects
-            console.log(imglink[0]);
-        },
-        error: function() {
-            alert("error adding floor plan");
-        }
-    });
 
 
 });
