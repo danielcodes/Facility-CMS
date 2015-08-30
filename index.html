@@ -1,1 +1,108 @@
-My Page
+<html>
+    <head>
+        <title>Room Form</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+
+        <p>Disclaimer, the image is not mine, was found on the internet</p>
+        <p>MODE: (either edit or display)</p>
+
+        <!-- toggle between these two modes -->
+        <div>
+          <form role="form">
+            <label class="radio-inline">
+              <input type="radio" name="mode" id="mode-view">VIEW
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="mode" id="mode-edit">EDIT
+            </label>
+            <label>
+                <input type="button" id="change-mode" value="Change Mode">
+            </label>
+            <input type="button" id="save-position" value="Save position">
+          </form>
+        </div>
+        <p>Room symbol created here: </p>
+
+        <!-- save room for the template to be inserted -->
+        <template id="room-template">
+            <!-- room-number -->
+            <div data-id={{id}} class="room" style="left: {{left}}; top: {{top}}">
+                <!-- container, holds both picture and data -->
+                <div class="container">
+                    <!-- picture -->
+                    <div class="picture">
+                        <img src="{{imglink}}" />
+                    </div>
+
+                    <!-- data -->
+                    <div class="data-box">
+                        <ul class="data-list">
+                            <li class="key">Building</li>
+                            <li id="building">{{building}}</li>
+
+                            <li class="key">Room #</li>
+                            <li id="room#">{{roomnumber}}</li>
+
+                            <li class="key">Department</li>
+                            <li id="department">{{department}}</li>
+
+                            <li class="key">Description</li>
+                            <li id="description">{{description}}</li>
+
+                            <li class="key">Occupant</li>
+                            <li id="occupant">{{occupant}}</li>
+                        </ul>
+                    </div>
+                <!-- closes container -->
+                </div>
+            <!-- closes room number -->
+            </div>
+        </template>
+
+        <!-- WRAPS THE FLOOR PLAN AND FORM -->
+        <div id="wrapper">
+
+            <!-- insert content to this ul -->
+            <div id="outer"></div>
+
+            <!-- enclose form in a division -->
+            <div id="data-form">
+
+                <!-- ADDING BACKGROUND IMG THROUGH A LINK -->
+                <!-- <h4>Add floor plan image</h4>
+                <p> Floor-plan link <input type="text" id="floorplan"> </p>
+                <button id="add-plan">Add floor plan</button> -->
+
+                <h4>Add room</h4>
+                <!-- 5 parameters -->
+                <p> Building: <input type="text" id="building"> </p>
+                <p> Room-number: <input type="text" id="room-number"> </p>
+                <p> Department: <input type="text" id="department"> </p>
+                <p> Description: <input type="text" id="description"> </p>
+                <p> Occupant: <input type="text" id="occupant"> </p>
+                <p> Image-link: <input type="text" id="img-link"></p>
+                <!-- <p> left: <input type="text" id="left"> </p>
+                <p> top: <input type="text" id="top"></p> -->
+                <!-- button to add -->
+                <button id="add-room">Add room</button>
+                <!-- TRASH -->
+                <div id="trash">Drop symbol to delete</div>
+            </div>
+
+        <!-- ends wrapper -->
+        </div>
+
+        
+        
+        
+
+        <!-- scripts -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="bower_components/mustache/mustache.js"></script>
+        <script src="main.js" ></script>
+
+    </body>
+</html>

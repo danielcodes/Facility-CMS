@@ -1,0 +1,133 @@
+html {
+    background-color: #82A5B6;
+}
+
+/*added*/
+.room {
+    height: 20px;
+    width: 20px;
+    /*this sets a default position if it
+    isn't given on the form*/
+    left: 172px;
+    top: -48px;
+    position: absolute;
+    background-color: navy;
+    border-radius: 5px;
+}
+
+/*description*/
+#mode-bar p{
+    margin: 0px;
+}
+
+/*status bar*/
+#mode-bar ul{
+    list-style: none;
+    padding: 0px;
+
+}
+
+/*status bar elements*/
+#mode-bar li {
+    padding-left: 4px;
+    padding-right: 4px;
+
+    display: inline;
+    border: 1px solid black;
+}
+
+/*here and below is the hover pop up*/
+
+ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.key {
+    font-weight: bold;
+}
+
+.container {
+    height:285px;
+    width: 600px;
+    border-radius: 25px;
+
+    position: relative;
+    background-color: #00334C;
+    display: none;
+    z-index: 1;
+}
+
+.picture {
+    height: 260px;
+    width: 400px;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    border-radius: 25px;
+}
+
+.data-box {
+    height: 260px;
+    width: 170px;
+    border-radius: 25px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #DCDCD9;
+}
+
+/*TRASH*/
+#trash {
+    height: 90px;
+    width: 260px;
+    border: 3px solid red;
+    margin: 10px;
+
+    /*3 lines to center text*/
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #B20000;
+}
+
+#trash.ui-state-hover{
+    background: red;
+}
+
+/*Placing floor plan and form*/
+#wrapper {
+    position: relative;
+    padding: 10px;
+}
+
+#outer {
+    background : url("https://raw.githubusercontent.com/danielcodes/facility-CMS/master/img/floor-plan-example.jpg");
+	position: absolute;
+    width: 910px;
+	height : 550px;
+
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+#data-form {
+    position: absolute;
+    background-color: C3C3E5;
+    padding: 8px;
+    width: 280px;
+    left: 935px;
+    border: 1px solid black;
+    /*display: none;*/
+}
