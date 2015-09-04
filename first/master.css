@@ -1,0 +1,43 @@
+html {
+    background-color: #CCCC66;
+}
+
+a {
+    font-weight: bold;
+}
+
+#outer {
+    background: url(https://raw.githubusercontent.com/danielcodes/facility-CMS/master/img/floor-plan-example.jpg);
+    position: relative;
+
+    height: 550px;
+    width: 600px;
+}
+
+#rm-503 {
+    position: absolute;
+
+    left: 210px;
+    top: 40px;
+}
+
+#rm-508 {
+    position: absolute;
+
+    left: 496px;
+    top: 120px;
+}
+
+#rm-582 {
+    position: absolute;
+
+    left: 105px;
+    top: 366px;
+}
+
+#rm-581 {
+    position: absolute;
+
+    left: 108px;
+    top: 508px;
+}
