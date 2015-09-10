@@ -202,6 +202,24 @@ $(document).ready(function (){
         }
     }); //end droppable
 
+    //delete all nodes
+    $("#delete-all").on('click', function() {
+
+        //for each element of class room, do something
+        $('.room').each(function() {
+
+            //make ajax call to remove here
+            $.ajax({
+                type: 'DELETE',
+                url: 'http://rest.learncode.academy/api/daniel/friends/' + $(this).attr('data-id'),
+                success: function (){
+                    console.log("Item has been deleted");
+                }
+            });
+
+        }); //end "loop"
+    }); //ends button
+
 
 
 });
